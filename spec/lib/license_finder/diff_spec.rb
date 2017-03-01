@@ -36,6 +36,7 @@ module LicenseFinder
         let(:file2_content) { "nokogiri,1.6.6.2,MIT" }
 
         it 'should create and set packages with unchanged diff state' do
+          raise
           nokogiri = find_package_with_name('nokogiri')[0]
           expect(nokogiri.status).to eq :unchanged
         end
