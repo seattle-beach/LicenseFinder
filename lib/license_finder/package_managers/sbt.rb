@@ -6,6 +6,7 @@ module LicenseFinder
     end
 
     def current_packages
+      run_sbt_license_report
       report_csv = Dir.glob(File.join('target','license-reports') + '/*csv').first
       CSV.read(report_csv, headers: true).map do |row|
         _package_info, package_name, version = row['Dependency'].split(' # ')
