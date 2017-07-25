@@ -37,10 +37,13 @@ report.
 * Java (via `maven`)
 * Java (via `gradle`)
 
+
 ### Experimental project types
 
 * Erlang (via `rebar`)
 * Objective-C (+ CocoaPods 0.39 and below. See [CocoaPods Specs Repo Sharding](http://blog.cocoapods.org/Sharding/))
+* Scala (via `sbt`)
+
 
 ## Installation
 
@@ -126,6 +129,7 @@ languages, as long as that language has a package definition in the project dire
 * `bower.json` (for `bower`)
 * `Podfile` (for CocoaPods)
 * `rebar.config` (for `rebar`)
+* `build.sbt` (for `sbt`)
 * `packages/` directory (for `Nuget`)
 
 
@@ -355,6 +359,9 @@ downloadLicenses {
 
 `license_finder` supports Maven.
 
+### Scala Projects
+
+`license_finder` supports Scala via sbt using the [sbt-license-report](https://github.com/sbt/sbt-license-report) plugin. Install the plugin via [https://github.com/sbt/sbt-license-report](https://github.com/sbt/sbt-license-report) No additional configuration is required.
 
 ## Requirements
 
