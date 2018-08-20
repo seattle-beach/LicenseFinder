@@ -37,9 +37,13 @@ module LicenseFinder
                 else
                   './mvnw'
                 end
-      maven = 'mvn'
+      maven = self.class.package_management_command
 
       File.exist?(File.join(project_path, wrapper)) ? wrapper : maven
+    end
+
+    def self.package_management_command
+      'mvn'
     end
 
     def possible_package_paths

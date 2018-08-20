@@ -9,7 +9,7 @@ module LicenseFinder
     end
 
     def current_packages
-      command = "#{package_management_command} dumpLicenseReport"
+      command = "#{self.class.package_management_command} dumpLicenseReport"
       _stdout, stderr, status = Dir.chdir(project_path) { Cmd.run(command) }
       raise "Command '#{command}' failed to execute: #{stderr}" unless status.success?
 
@@ -35,7 +35,7 @@ module LicenseFinder
       packages.uniq
     end
 
-    def package_management_command
+    def self.package_management_command
       'sbt'
     end
 

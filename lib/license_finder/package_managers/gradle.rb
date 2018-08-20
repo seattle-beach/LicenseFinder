@@ -31,13 +31,20 @@ module LicenseFinder
     def package_management_command
       if Platform.windows?
         wrapper = 'gradlew.bat'
-        gradle = 'gradle.bat'
       else
         wrapper = './gradlew'
-        gradle = 'gradle'
       end
 
+      gradle = self.class.package_management_command
       File.exist?(File.join(project_path, wrapper)) ? wrapper : gradle
+    end
+
+    def self.package_management_command
+      if Platform.windows?
+        'gradle.bat'
+      else
+        'gradle'
+      end
     end
 
     private

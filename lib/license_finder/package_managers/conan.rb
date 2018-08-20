@@ -2,6 +2,10 @@ require 'license_finder/package_utils/conan_info_parser'
 
 module LicenseFinder
   class Conan < PackageManager
+    def self.package_management_command
+      'conan'
+    end
+
     def possible_package_paths
       [project_path.join('conanfile.txt')]
     end
