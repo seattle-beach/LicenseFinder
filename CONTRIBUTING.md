@@ -82,7 +82,7 @@ To successfully run the test suite, you will need the following installed:
 - Maven (requires Java)
 - Gradle (requires Java)
 - Pip (requires python)
-- Rebar (requires erlang)
+- Rebar (not rebar3, see <https://github.com/rebar/rebar>. requires erlang)
 - GoDep, GoWorkspace, govendor, Glide, Dep, and Gvt (requires golang)
 - CocoaPods (requires ruby)
 - Bundler (requires ruby)
@@ -90,6 +90,7 @@ To successfully run the test suite, you will need the following installed:
 - Mix (requires Elixir)
 - Conan
 - SBT
+- Cargo
 
 The [LicenseFinder docker image](https://hub.docker.com/r/licensefinder/license_finder/) already contains these dependencies.
 
